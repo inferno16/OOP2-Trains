@@ -13,7 +13,7 @@ namespace OOP2_Trains.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201611261208275_InitialCreate"; }
+            get { return "201612030712237_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

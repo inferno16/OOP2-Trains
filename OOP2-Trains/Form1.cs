@@ -21,11 +21,11 @@ namespace OOP2_Trains
              
             trains = _trainContext.KindTrains.ToList()
                 .Select(t => new KindTrain(t.Id, t.TrainKind,
-                    t.ArrivalTime,
+                    t.ArrivalTime.ToUniversalTime().ToLocalTime(),
                     t.Stops.ToDictionary(c => c.Station, c => c.ArrivalTime),
                     t.FirstStation,
                     t.LastStation,
-                    t.DepartureTime,
+                    t.DepartureTime.ToUniversalTime().ToLocalTime(),
                     t.Distance))
                 .ToList();
 

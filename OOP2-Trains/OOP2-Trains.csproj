@@ -92,9 +92,9 @@
       <DependentUpon>GetTrainsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="KindTrain.cs" />
-    <Compile Include="Migrations\201611261208275_InitialCreate.cs" />
-    <Compile Include="Migrations\201611261208275_InitialCreate.Designer.cs">
-      <DependentUpon>201611261208275_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201612030712237_InitialCreate.cs" />
+    <Compile Include="Migrations\201612030712237_InitialCreate.Designer.cs">
+      <DependentUpon>201612030712237_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -123,8 +123,8 @@
     <EmbeddedResource Include="GetTrainsForm.resx">
       <DependentUpon>GetTrainsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611261208275_InitialCreate.resx">
-      <DependentUpon>201611261208275_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612030712237_InitialCreate.resx">
+      <DependentUpon>201612030712237_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
