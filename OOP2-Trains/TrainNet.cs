@@ -9,7 +9,7 @@ namespace OOP2_Trains
 {
     public class TrainNet
     {
-        private List<KindTrain> _trains;// = new DbSet<KindTrain>();
+        private List<KindTrain> _trains;
         private TrainContext trainContext;
 
         public TrainNet(List<KindTrain> trains)
@@ -76,7 +76,7 @@ namespace OOP2_Trains
                     .Stops
                     .Select(t => ToStopEntity(t, enteredTrain)));
             trainContext.SaveChanges();
-        }     
+        }
 
         public void DeleteTrain(KindTrain train)
         {
@@ -89,7 +89,9 @@ namespace OOP2_Trains
 
         public void UpdateTrain(KindTrain train)
         {
-            // _trains.Where(t => t.Id == train.Id).First() = train;
+            KindTrain listTrain = _trains.Where(t => t.Id == train.Id).FirstOrDefault();
+            _trains.Remove(listTrain);
+            _trains.Add(train);
             trainContext.KindTrains.AddOrUpdate(ToTrainEntity(train));
             trainContext.SaveChanges();
         }
