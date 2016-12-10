@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -7,10 +8,20 @@ namespace OOP2_Trains
     public partial class GetTrainsBeforeArrivalForm : Form
     {
         private TrainNet _trainNet;
-        public GetTrainsBeforeArrivalForm(TrainNet trainNet)
+        public GetTrainsBeforeArrivalForm()
+        {
+            InitializeComponent();
+        }
+        public GetTrainsBeforeArrivalForm(TrainNet trainNet, List<string> sStation = null, List<string> eStation = null)
+             :this()
         {
             _trainNet = trainNet;
-            InitializeComponent();
+            //if sStation and eStation are not passed initialize them to empty List<string>
+            sStation = sStation ?? new List<string>();
+            eStation = eStation ?? new List<string>();
+
+            textBox3.AutoCompleteCustomSource.AddRange(sStation.ToArray());
+            textBox2.AutoCompleteCustomSource.AddRange(eStation.ToArray());
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

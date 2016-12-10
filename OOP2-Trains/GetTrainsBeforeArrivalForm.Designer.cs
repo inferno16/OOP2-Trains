@@ -50,6 +50,8 @@
             // 
             // textBox2
             // 
+            this.textBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox2.Location = new System.Drawing.Point(220, 90);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
@@ -78,6 +80,8 @@
             // 
             // textBox3
             // 
+            this.textBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox3.Location = new System.Drawing.Point(220, 48);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
@@ -120,6 +124,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GetTrainsBeforeArrivalForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Влакове пристигащи преди час";
             this.ResumeLayout(false);

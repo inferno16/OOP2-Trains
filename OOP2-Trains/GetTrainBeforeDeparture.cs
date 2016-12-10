@@ -19,14 +19,16 @@ namespace OOP2_Trains
             InitializeComponent();
         }
 
-        public GetTrainBeforeDeparture(TrainNet _trainNet) : this()
+        public GetTrainBeforeDeparture(TrainNet _trainNet, List<string> sStation = null, List<string> eStation = null)
+            : this()
         {
             this._trainNet = _trainNet;
-        }
+            //if sStation and eStation are not passed initialize them to empty List<string>
+            sStation = sStation ?? new List<string>();
+            eStation = eStation ?? new List<string>();
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            textBox3.AutoCompleteCustomSource.AddRange(sStation.ToArray());
+            textBox2.AutoCompleteCustomSource.AddRange(eStation.ToArray());
         }
 
         private void button1_Click(object sender, EventArgs e)

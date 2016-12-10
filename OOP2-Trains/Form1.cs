@@ -34,26 +34,26 @@ namespace OOP2_Trains
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GetTrainsForm trainForm = new GetTrainsForm(_trainNet);
+            GetTrainsForm trainForm = new GetTrainsForm(_trainNet, GetStartStations(), GetEndStations());
             trainForm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GetTrainBeforeDeparture trainForm = new GetTrainBeforeDeparture(_trainNet);
+            GetTrainBeforeDeparture trainForm = new GetTrainBeforeDeparture(_trainNet, GetStartStations(), GetEndStations());
             trainForm.ShowDialog();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            GetTrainsBeforeArrivalForm trainForm = new GetTrainsBeforeArrivalForm(_trainNet);
+            GetTrainsBeforeArrivalForm trainForm = new GetTrainsBeforeArrivalForm(_trainNet, GetStartStations(), GetEndStations());
             trainForm.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            GetFastestTrainForm trainForm = new GetFastestTrainForm(_trainNet);
+            GetFastestTrainForm trainForm = new GetFastestTrainForm(_trainNet, GetStartStations(), GetEndStations());
             trainForm.ShowDialog();
         }
 
@@ -61,6 +61,16 @@ namespace OOP2_Trains
         {
             GetAverageSpeedForm trainForm = new GetAverageSpeedForm(_trainNet);
             trainForm.ShowDialog();
+        }
+
+        List<string> GetStartStations()
+        {
+            return _trainContext.KindTrains.Select(c => c.FirstStation).Distinct().ToList();
+        }
+
+        List<string> GetEndStations()
+        {
+            return _trainContext.KindTrains.Select(c => c.LastStation).Distinct().ToList();
         }
     }
 }
