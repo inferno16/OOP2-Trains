@@ -35,32 +35,32 @@ namespace OOP2_Trains
         private void button1_Click(object sender, EventArgs e)
         {
             GetTrainsForm trainForm = new GetTrainsForm(_trainNet);
-            trainForm.Show();
+            trainForm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             GetTrainBeforeDeparture trainForm = new GetTrainBeforeDeparture(_trainNet);
-            trainForm.Show();
+            trainForm.ShowDialog();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             GetTrainsBeforeArrivalForm trainForm = new GetTrainsBeforeArrivalForm(_trainNet);
-            trainForm.Show();
+            trainForm.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             GetFastestTrainForm trainForm = new GetFastestTrainForm(_trainNet);
-            trainForm.Show();
+            trainForm.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             GetAverageSpeedForm trainForm = new GetAverageSpeedForm(_trainNet);
-            trainForm.Show();
+            trainForm.ShowDialog();
         }
     }
 }
