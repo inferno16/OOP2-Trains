@@ -29,15 +29,20 @@ namespace OOP2_Trains
         {
             if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text))
             {
-                Train train = _trainNet.GetFastestTrain(textBox1.Text, textBox2.Text);
+                KindTrain train = _trainNet.GetFastestTrain(textBox1.Text, textBox2.Text);
                 if (train == null)
                 {
                     MessageBox.Show("Няма намерен влак");
                 }
                 else
                 {
-                    train.Print();
+                    DisplayData ddf = new DisplayData(new List<KindTrain>() {train});
+                    ddf.ShowDialog();
                 }
+            }
+            else
+            {
+                MessageBox.Show("Моля въведете необходимите данни!");
             }
         }
     }

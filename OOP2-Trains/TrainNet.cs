@@ -104,6 +104,7 @@ namespace OOP2_Trains
 
         public IEnumerable<KindTrain> GetTrainsBeforeDeparture(string fStation, string lStation, DateTime hour)
         {
+            var gt = GetTrains(fStation, lStation);
             return GetTrains(fStation, lStation).Where(t => t.DepartureTime < hour);
         }
 

@@ -40,11 +40,13 @@ namespace OOP2_Trains
                 }
                 else
                 {
-                    foreach (var train in trains)
-                    {
-                        train.Print();
-                    }
+                    DisplayData ddf = new DisplayData(trains.ToList());
+                    ddf.ShowDialog();
                 }
+            }
+            else
+            {
+                MessageBox.Show("Моля въведете необходимите данни!");
             }
         }
     }
