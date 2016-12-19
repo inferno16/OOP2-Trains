@@ -28,12 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.заПрограматаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.изходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.обновиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.относноToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.изходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refeshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -91,11 +107,100 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.заПрограматаToolStripMenuItem,
+            this.изходToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(156, 48);
+            // 
+            // заПрограматаToolStripMenuItem
+            // 
+            this.заПрограматаToolStripMenuItem.Name = "заПрограматаToolStripMenuItem";
+            this.заПрограматаToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.заПрограматаToolStripMenuItem.Text = "За програмата";
+            // 
+            // изходToolStripMenuItem
+            // 
+            this.изходToolStripMenuItem.Name = "изходToolStripMenuItem";
+            this.изходToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.изходToolStripMenuItem.Text = "Изход";
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.обновиToolStripMenuItem,
+            this.относноToolStripMenuItem,
+            this.изходToolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(123, 70);
+            // 
+            // обновиToolStripMenuItem
+            // 
+            this.обновиToolStripMenuItem.Name = "обновиToolStripMenuItem";
+            this.обновиToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.обновиToolStripMenuItem.Text = "Обнови";
+            // 
+            // относноToolStripMenuItem
+            // 
+            this.относноToolStripMenuItem.Name = "относноToolStripMenuItem";
+            this.относноToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.относноToolStripMenuItem.Text = "Относно";
+            // 
+            // изходToolStripMenuItem1
+            // 
+            this.изходToolStripMenuItem1.Name = "изходToolStripMenuItem1";
+            this.изходToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.изходToolStripMenuItem1.Text = "Изход";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(393, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refeshToolStripMenuItem,
+            this.aboutToolStripMenuItem1,
+            this.exitToolStripMenuItem2});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.menuToolStripMenuItem.Text = "Меню";
+            // 
+            // refeshToolStripMenuItem
+            // 
+            this.refeshToolStripMenuItem.Name = "refeshToolStripMenuItem";
+            this.refeshToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.refeshToolStripMenuItem.Text = "Обнови влаковете";
+            this.refeshToolStripMenuItem.Click += new System.EventHandler(this.refeshToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(175, 22);
+            this.aboutToolStripMenuItem1.Text = "За програмата";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
+            // 
+            // exitToolStripMenuItem2
+            // 
+            this.exitToolStripMenuItem2.Name = "exitToolStripMenuItem2";
+            this.exitToolStripMenuItem2.Size = new System.Drawing.Size(175, 22);
+            this.exitToolStripMenuItem2.Text = "Изход";
+            this.exitToolStripMenuItem2.Click += new System.EventHandler(this.exitToolStripMenuItem2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 330);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -103,12 +208,18 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Влакове";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -119,6 +230,18 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem заПрограматаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem изходToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem обновиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem относноToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem изходToolStripMenuItem1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refeshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem2;
     }
 }
 

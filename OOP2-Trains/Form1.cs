@@ -16,9 +16,14 @@ namespace OOP2_Trains
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            UpdateDatabase();
+        }
+
+        private void UpdateDatabase()
+        {
             _trainContext = new TrainContext();
             List<KindTrain> trains = new List<KindTrain>();
-             
+
             trains = _trainContext.KindTrains.ToList()
                 .Select(t => new KindTrain(t.Id, t.TrainKind,
                     t.ArrivalTime.ToUniversalTime().ToLocalTime(),
@@ -71,6 +76,22 @@ namespace OOP2_Trains
         List<string> GetEndStations()
         {
             return _trainContext.KindTrains.Select(c => c.LastStation).Distinct().ToList();
+        }
+
+        private void refeshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateDatabase();
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            About form = new About();
+            form.ShowDialog();
+        }
+
+        private void exitToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
